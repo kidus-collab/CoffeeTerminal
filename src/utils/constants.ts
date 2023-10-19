@@ -7,4 +7,12 @@ export const colors: string[] = [
   "rgba(24, 21, 21, 1)",
 ];
 
-export const Font: string[] = [];
+interface Fonttype {
+  heading: string;
+  paragraph: string;
+}
+
+export const Font: Fonttype = {
+  heading: "montserrat , san-serif",
+  paragraph: "",
+};
