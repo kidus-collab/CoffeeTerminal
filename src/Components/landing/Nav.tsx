@@ -1,37 +1,43 @@
 import React from "react";
 
 import { Image, Text, useBoolean, Box } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
 
 import logo from "../../utils/images/Nav/logo.png";
 
 import { Font, colors } from "../../utils/constants";
+
+import Menu from "./Menu";
 
 const Nav = () => {
   const [Red, setRed] = useBoolean(false);
 
   return (
     <Box display="flex" justifyContent="space-between">
-      <Box ml="6px" mt="5px">
-        <Image src={logo} />
+      <Box ml={{ base: 2, md: 8 }} mt="5px">
+        <Image
+          src={logo}
+          w={{ base: "60px", lg: "80px" }}
+          h={{ base: "40px", lg: "60px" }}
+        />
       </Box>
-      <Box display="flex" mr={3} gap={3}>
+      <Menu />
+      <Box display={{ base: "none", lg: "flex" }} mt={5} mr={3} gap={3}>
         <Box
           borderBottom={Red ? "2px" : "none"}
           borderColor={Red ? colors[2] : "transparent"}
           borderBottomRadius="md"
           mx={5}
         >
-          <Link to="/landing">
+          <a href="#Landing">
             <Text
               fontFamily={Font.heading}
-              fontWeight="medium"
+              fontWeight="bold"
               fontSize="16px"
               onClick={setRed.toggle}
             >
               Home
             </Text>
-          </Link>
+          </a>
         </Box>
         <Box
           borderBottom={Red ? "2px" : "none"}
@@ -39,33 +45,33 @@ const Nav = () => {
           borderBottomRadius="md"
           mx={5}
         >
-          <Link to="/about">
+          <a href="#About">
             <Text
               fontFamily={Font.heading}
-              fontWeight="medium"
+              fontWeight="bold"
               fontSize="16px"
               onClick={setRed.toggle}
             >
               About
             </Text>
-          </Link>
+          </a>
         </Box>
         <Box
           borderBottom={Red ? "2px" : "none"}
           borderColor={Red ? colors[2] : "transparent"}
           borderBottomRadius="md"
         >
-          <Link to="/branches">
+          <a href="#Branches">
             <Text
               fontFamily={Font.heading}
-              fontWeight="medium"
+              fontWeight="bold"
               fontSize="16px"
               onClick={setRed.toggle}
               mx={5}
             >
               Branches
             </Text>
-          </Link>
+          </a>
         </Box>
         <Box
           borderBottom={Red ? "2px" : "none"}
@@ -73,16 +79,16 @@ const Nav = () => {
           borderBottomRadius="md"
           mx={5}
         >
-          <Link to="/Mission">
+          <a href="#Mission">
             <Text
               fontFamily={Font.heading}
-              fontWeight="medium"
+              fontWeight="bold"
               fontSize="16px"
               onClick={setRed.toggle}
             >
               Mission
             </Text>
-          </Link>
+          </a>
         </Box>
         <Box
           borderBottom={Red ? "2px" : "none"}
@@ -90,16 +96,16 @@ const Nav = () => {
           borderBottomRadius="md"
           mx={5}
         >
-          <Link to="/Future">
+          <a href="#Future">
             <Text
               fontFamily={Font.heading}
-              fontWeight="medium"
+              fontWeight="bold"
               fontSize="16px"
               onClick={setRed.toggle}
             >
               Future
             </Text>
-          </Link>
+          </a>
         </Box>
       </Box>
     </Box>

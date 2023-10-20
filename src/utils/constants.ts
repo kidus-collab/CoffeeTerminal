@@ -14,5 +14,5 @@ interface Fonttype {
 
 export const Font: Fonttype = {
   heading: "montserrat , san-serif",
-  paragraph: "",
+  paragraph: "montserrat , san-serif",
 };
