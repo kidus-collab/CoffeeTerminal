@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 
-import { Image, Text, useBoolean, Box } from "@chakra-ui/react";
+import { Image, Text, Box } from "@chakra-ui/react";
 
 import logo from "../../utils/images/Nav/logo.png";
 
@@ -8,8 +8,12 @@ import { Font, colors } from "../../utils/constants";
 
 import Menu from "./Menu";
 
+interface useStateType {
+  isactive: boolean;
+  name: string;
+}
 const Nav = () => {
-  const [Red, setRed] = useBoolean(false);
+  const [Red, setRed] = useState<useStateType>({ isactive: false, name: "" });
 
   return (
     <Box display="flex" mb={5} justifyContent="space-between">
@@ -22,87 +26,100 @@ const Nav = () => {
         />
       </Box>
       <Menu />
-      <Box display={{ base: "none", lg: "flex" }} mt={5} mr={3} gap={3}>
+      <Box
+        display={{ base: "none", md: "flex" }}
+        mt={5}
+        mr={{ md: 4, lg: 10 }}
+        gap={{ md: 6, lg: 12 }}
+      >
         <Box
-          borderBottom={Red ? "2px" : "none"}
-          borderColor={Red ? colors[2] : "transparent"}
-          borderBottomRadius="md"
-          mx={5}
+          border="3px"
+          borderBottom={Red.isactive && Red.name === "Home" ? "3px" : "none"}
+          borderColor={
+            Red.isactive && Red.name === "Home" ? colors[2] : "transparent"
+          }
+          _hover={{ borderBottom: "3px", borderColor: colors[2] }}
+          alignItems="center"
+          justifyContent="center"
         >
           <a href="#Landing">
             <Text
               fontFamily={Font.heading}
               fontWeight="bold"
               fontSize="16px"
-              onClick={setRed.toggle}
+              onClick={() => setRed({ isactive: true, name: "Home" })}
             >
               Home
             </Text>
           </a>
         </Box>
         <Box
-          borderBottom={Red ? "2px" : "none"}
-          borderColor={Red ? colors[2] : "transparent"}
-          borderBottomRadius="md"
-          mx={5}
+          borderBottom={Red.isactive && Red.name === "Home" ? "3px" : "none"}
+          borderColor={
+            Red.isactive && Red.name === "Home" ? colors[2] : "transparent"
+          }
+          _hover={{ borderBottom: "3px", borderColor: colors[2] }}
         >
           <a href="#About">
             <Text
               fontFamily={Font.heading}
               fontWeight="bold"
               fontSize="16px"
-              onClick={setRed.toggle}
+              onClick={() => setRed({ isactive: true, name: "Home" })}
             >
               About
             </Text>
           </a>
         </Box>
         <Box
-          borderBottom={Red ? "2px" : "none"}
-          borderColor={Red ? colors[2] : "transparent"}
-          borderBottomRadius="md"
+          borderBottom={Red.isactive && Red.name === "Home" ? "3px" : "none"}
+          borderColor={
+            Red.isactive && Red.name === "Home" ? colors[2] : "transparent"
+          }
+          _hover={{ borderBottom: "3px", borderColor: colors[2] }}
         >
           <a href="#Branches">
             <Text
               fontFamily={Font.heading}
               fontWeight="bold"
               fontSize="16px"
-              onClick={setRed.toggle}
-              mx={5}
+              onClick={() => setRed({ isactive: true, name: "Home" })}
             >
               Branches
             </Text>
           </a>
         </Box>
         <Box
-          borderBottom={Red ? "2px" : "none"}
-          borderColor={Red ? colors[2] : "transparent"}
-          borderBottomRadius="md"
-          mx={5}
+          borderBottom={Red.isactive && Red.name === "Home" ? "3px" : "none"}
+          borderColor={
+            Red.isactive && Red.name === "Home" ? colors[2] : "transparent"
+          }
+          _hover={{ borderBottom: "3px", borderColor: colors[2] }}
         >
           <a href="#Mission">
             <Text
               fontFamily={Font.heading}
               fontWeight="bold"
               fontSize="16px"
-              onClick={setRed.toggle}
+              onClick={() => setRed({ isactive: true, name: "Home" })}
             >
               Mission
             </Text>
           </a>
         </Box>
         <Box
-          borderBottom={Red ? "2px" : "none"}
-          borderColor={Red ? colors[2] : "transparent"}
-          borderBottomRadius="md"
-          mx={5}
+          borderBottom={Red.isactive && Red.name === "Home" ? "3px" : "none"}
+          borderColor={
+            Red.isactive && Red.name === "Home" ? colors[2] : "transparent"
+          }
         >
           <a href="#Future">
             <Text
               fontFamily={Font.heading}
               fontWeight="bold"
               fontSize="16px"
-              onClick={setRed.toggle}
+              _hover={{ borderBottom: "3px", borderColor: colors[2] }}
+              onClick={() => setRed({ isactive: true, name: "Home" })}
             >
               Future
             </Text>
