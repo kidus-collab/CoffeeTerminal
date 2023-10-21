@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Box, Center, HStack, Text } from "@chakra-ui/react";
+import { Box, HStack, Text } from "@chakra-ui/react";
 import MenuCard from "./MenuCard";
 //images
 import Bgimg from "../../utils/images/Menu/logobgpic.jpg";
@@ -45,13 +45,19 @@ const mohito: Packed = {
 // machiato card  data
 const machiato: Packed = {
   Img: Machiatto,
-  h1: "Mohito",
+  h1: "Machiatto",
   h2: "Breathtaking machiato with takeaway cup , Write customers names on take away cup ",
 };
 
 const Services = () => {
   return (
-    <Box bgImg={Bgimg} w="100%">
+    <Box
+      transitionDelay="300ms"
+      transitionProperty="all"
+      transitionDuration="300ms"
+      bgImg={Bgimg}
+      w="100%"
+    >
       <div id="Services">
         <Box alignItems="center" justifyContent="center">
           <Text
