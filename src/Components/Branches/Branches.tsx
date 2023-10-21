@@ -41,7 +41,6 @@ const Branches = () => {
           </Box>
         </Text>
       </Box>
-      s
     </div>
   );
 };
