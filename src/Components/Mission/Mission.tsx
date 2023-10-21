@@ -51,7 +51,7 @@ const Mission = () => {
     <section id="Mission">
       <Box mx={3} my={6}>
         <Text
-          fontSize={{ base: "40px", md: "50px" }}
+          fontSize={{ base: "30px", sm: "40px", md: "50px" }}
           fontWeight="black"
           fontFamily={Font.heading}
           textAlign="center"
