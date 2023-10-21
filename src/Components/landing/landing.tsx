@@ -76,7 +76,7 @@ const Landing = () => {
           >
             <Image
               src={packedCoffee}
-              w={{ base: "330px", sm: "320px", md: "400px", lg: "480px" }}
+              w={{ base: "330px", sm: "320px", md: "400px", lg: "490px" }}
               h={{ base: "155px", sm: " 230px ", md: "300px", lg: "340px" }}
               alignSelf="self-end"
               mr="-30px"
