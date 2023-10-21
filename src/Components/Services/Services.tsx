@@ -51,14 +51,15 @@ const machiato: Packed = {
 
 const Services = () => {
   return (
-    <Box bgImg={Bgimg} border="2px" borderColor="black">
+    <Box bgImg={Bgimg} w="100%">
       <div id="Services">
         <Box alignItems="center" justifyContent="center">
           <Text
-            fontSize="50px"
+            fontSize={{ base: "25px", sm: "30px", md: "40px", lg: "50px" }}
             fontWeight="black"
             fontFamily={Font.heading}
             textAlign="center"
+            mt="50px"
           >
             What we serve customers
           </Text>
@@ -66,10 +67,20 @@ const Services = () => {
             fontWeight="normal"
             fontFamily={Font.paragraph}
             textAlign="center"
+            mb={8}
+            fontSize={{ base: "12px", md: "15px", lg: "18px" }}
           >
             Roasted & grounded coffee from all around ethiopia
           </Text>
-          <HStack mx="auto" mb={4}>
+          <HStack
+            w="100%"
+            display="flex"
+            gap={{ base: 5, md: 20 }}
+            mx="auto"
+            justifyContent={{ base: "space-evenly", lg: "center" }}
+            alignItems="Center"
+            mb={4}
+          >
             <MenuCard img={packed.Img} hone={packed.h1} htwo={packed.h2} />
             <MenuCard
               img={catering.Img}
@@ -78,11 +89,11 @@ const Services = () => {
             />
           </HStack>
           <Text
-            fontSize="50px"
+            fontSize={{ base: "35px", sm: "40px", md: "50px" }}
             fontWeight="black"
             fontFamily={Font.heading}
             textAlign="center"
-            mt={1}
+            mt="100px"
           >
             Menu
           </Text>
@@ -90,10 +101,20 @@ const Services = () => {
             fontWeight="normal"
             fontFamily={Font.paragraph}
             textAlign="center"
+            mb={5}
           >
             Few of our finest beverages
           </Text>
-          <HStack w="100%" justifyContent="space-evenly" alignItems="Center">
+          <HStack
+            w="100%"
+            display="flex"
+            gap={{ base: 5, lg: 8 }}
+            overflowX="auto"
+            alignItems="Center"
+            mx="auto"
+            justifyContent="center"
+            mb="50px"
+          >
             <MenuCard
               img={coffeewater.Img}
               hone={coffeewater.h1}
