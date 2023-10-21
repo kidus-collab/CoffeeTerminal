@@ -6,15 +6,9 @@ import { FaAlignJustify } from "react-icons/fa";
 const Menu = () => {
   const [toggle, setToggle] = useBoolean(false);
   return (
-    <Box display={{ md: "none" }}>
-      <Button onClick={setToggle.toggle}>
-        <Icon
-          pos="absolute"
-          top={3}
-          right={3}
-          as={FaAlignJustify}
-          color={toggle ? "white" : "black"}
-        />
+    <Box display={{ base: "block", md: "none" }} boxShadow="md" rounded="lg">
+      <Button pos="absolute" top={5} right={5} onClick={setToggle.toggle}>
+        <Icon as={FaAlignJustify} color={toggle ? "white" : "black"} />
       </Button>
     </Box>
   );
