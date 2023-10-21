@@ -14,7 +14,11 @@ interface MissonCardProps {
 const MissionCard: FC<MissonCardProps> = ({ img, h1, h2, location }) => {
   return (
     <Box width={{ base: "100%", md: "50%" }}>
-      <Image src={img} w="100%" h="300px" />
+      <Image
+        src={img}
+        w="100%"
+        h={{ base: "180px", sm: "260px", md: "230px", lg: "300px" }}
+      />
       <Box mx={5} alignItems="left" justifyContent="left">
         <Box mx={2} mb={2} mt={3} display="flex" justifyContent="space-between">
           <Text
