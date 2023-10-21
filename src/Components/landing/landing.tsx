@@ -19,7 +19,7 @@ const Landing = () => {
           display="flex"
           w={{ base: "100%", lg: "none" }}
           justifyContent="space-between"
-          mt={{ base: 4, sm: 5, lg: 4 }}
+          mt={{ base: 10, lg: 4 }}
           ml={{ base: 2, sm: 5, md: 8 }}
           mr={{ base: 0, lg: 8 }}
         >
@@ -34,10 +34,10 @@ const Landing = () => {
             </Text>
             <Text
               fontWeight="black"
-              fontSize={{ base: "25px", sm: "32px", md: "43px", lg: "55px" }}
+              fontSize={{ base: "23px", sm: "32px", md: "43px", lg: "55px" }}
               fontFamily={Font.heading}
               sx={{ lineHeight: "1.1em" }}
-              mb={{ base: 5, lg: 4 }}
+              mb={{ base: 3, lg: 4 }}
             >
               Cup of Coffee
               <br /> saves your
