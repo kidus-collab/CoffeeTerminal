@@ -6,32 +6,39 @@ import BranchCard, { kera, lafto, lebu } from "./BranchCard";
 const Branches = () => {
   return (
     <div id="Branches">
-      <Box w="100%" border="2px" borderColor="black">
+      <Box mt={5} w="100%">
         <Text
-          fontSize={{ base: "32px", md: "40px" }}
+          fontSize={{ base: "30px", md: "40px" }}
           fontWeight="black"
           fontFamily={Font.heading}
           textAlign="center"
+          mb={5}
         >
-          Location of our shop
-          <BranchCard
-            img={lafto.img}
-            branch={lafto.branch}
-            gate={lafto.gate}
-            location={lafto.location}
-          />
-          <BranchCard
-            img={lebu.img}
-            branch={lebu.branch}
-            gate={lebu.gate}
-            location={lebu.location}
-          />
-          <BranchCard
-            img={kera.img}
-            branch={kera.branch}
-            gate={kera.gate}
-            location={kera.location}
-          />
+          Location of our shops
+          <Box mt={6}>
+            <BranchCard
+              img={lafto.img}
+              branch={lafto.branch}
+              gate={lafto.gate}
+              location={lafto.location}
+            />
+          </Box>
+          <Box my={8}>
+            <BranchCard
+              img={lebu.img}
+              branch={lebu.branch}
+              gate={lebu.gate}
+              location={lebu.location}
+            />
+          </Box>
+          <Box>
+            <BranchCard
+              img={kera.img}
+              branch={kera.branch}
+              gate={kera.gate}
+              location={kera.location}
+            />
+          </Box>
         </Text>
       </Box>
       s
