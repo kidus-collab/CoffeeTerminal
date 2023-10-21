@@ -12,14 +12,15 @@ import Nav from "./Nav";
 
 const Landing = () => {
   return (
-    <section id="Landing">
-      <Box bgColor={colors[0]} mb="80px" w="100%">
+    <section style={{ width: "100%" }} id="Landing">
+      <Box bgColor={colors[0]} mb={10} w="100%">
         <Nav />
         <HStack
           display="flex"
+          w={{ base: "100%", lg: "none" }}
           justifyContent="space-between"
           mt={{ base: 4, sm: 5, lg: 4 }}
-          ml={{ base: 2, md: 8 }}
+          ml={{ base: 2, sm: 5, md: 8 }}
           mr={{ base: 0, lg: 8 }}
         >
           <Box alignItems="left">
@@ -33,33 +34,40 @@ const Landing = () => {
             </Text>
             <Text
               fontWeight="black"
-              fontSize={{ base: "23px", sm: "30px", md: "38px", lg: "55px" }}
+              fontSize={{ base: "25px", sm: "32px", md: "43px", lg: "55px" }}
               fontFamily={Font.heading}
               sx={{ lineHeight: "1.1em" }}
-              mb={3}
+              mb={{ base: 5, lg: 4 }}
             >
               Cup of Coffee
               <br /> saves your
               <br /> day
             </Text>
-            <Button
-              role="group"
-              rounded="xl"
-              px={{ base: 5, lg: 8 }}
-              py={{ base: 3, lg: 6 }}
-              bgColor={colors[1]}
-            >
-              <Icon color="white" as={BiSolidCoffeeTogo} />
-              <Text
-                color="white"
-                fontFamily={Font.heading}
-                fontSize={{ base: "10px", sm: "12px", md: "14px", lg: "16px" }}
-                ml={2}
-                fontWeight="bold"
+            <a href="#Services">
+              <Button
+                role="group"
+                rounded="xl"
+                px={{ base: 5, lg: 8 }}
+                py={{ base: 3, lg: 6 }}
+                bgColor={colors[1]}
               >
-                services
-              </Text>
-            </Button>
+                <Icon color="white" as={BiSolidCoffeeTogo} />
+                <Text
+                  color="white"
+                  fontFamily={Font.heading}
+                  fontSize={{
+                    base: "10px",
+                    sm: "12px",
+                    md: "14px",
+                    lg: "16px",
+                  }}
+                  ml={2}
+                  fontWeight="bold"
+                >
+                  services
+                </Text>
+              </Button>
+            </a>
           </Box>
           <Box
             alignItems={{ base: "right", lg: "center" }}
@@ -68,8 +76,10 @@ const Landing = () => {
           >
             <Image
               src={packedCoffee}
-              w={{ md: "400px", lg: "480px" }}
-              h={{ base: "150px", md: "300px", lg: "360px" }}
+              w={{ base: "330px", sm: "320px", md: "400px", lg: "480px" }}
+              h={{ base: "155px", sm: " 230px ", md: "300px", lg: "340px" }}
+              alignSelf="self-end"
+              mr="-30px"
             />
           </Box>
 
@@ -88,36 +98,36 @@ const Landing = () => {
                 <Icon
                   as={BiSolidCoffeeBean}
                   mr={3}
-                  fontSize="15px"
+                  fontSize="11px"
                   fontWeight="bold"
                 />
                 <Text
                   fontFamily={Font.paragraph}
-                  fontWeight="normal"
-                  fontSize="15px"
+                  fontWeight="regular"
+                  fontSize="11px"
                 >
                   {" "}
-                  Ethiopian coffee shop with
+                  coffee is more than just a beverage
                   <br />
-                  vision & mission
+                  It brings people together
                 </Text>
               </Flex>
               <Flex my={2}>
                 <Icon
                   as={BiSolidCoffeeBean}
                   mr={3}
-                  fontSize="15px"
+                  mt={1}
+                  fontSize="11px"
                   fontWeight="bold"
                 />
                 <Text
                   fontFamily={Font.paragraph}
-                  fontWeight="normal"
-                  fontSize="15px"
+                  fontWeight="regular"
+                  fontSize="11px"
                 >
                   {" "}
-                  Ethiopian coffee shop with
-                  <br />
-                  vision & mission
+                  premier gateway for the finest
+                  <br /> coffee in Ethiopia
                 </Text>
               </Flex>
             </Box>
