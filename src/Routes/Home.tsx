@@ -8,7 +8,7 @@ import { Services, About, Mission, Future, Branches } from "./export";
 
 const Home = () => {
   return (
-    <VStack overflow="auto" w="100%" h="100vh">
+    <VStack w="100%" h="100vh">
       <Landing />
       <About />
       <Services />
