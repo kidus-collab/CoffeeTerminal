@@ -12,12 +12,13 @@ const Nav = () => {
   const [Red, setRed] = useBoolean(false);
 
   return (
-    <Box display="flex" justifyContent="space-between">
+    <Box display="flex" mb={5} justifyContent="space-between">
       <Box ml={{ base: 2, md: 8 }} mt="5px">
         <Image
           src={logo}
+          mt={2}
           w={{ base: "60px", lg: "80px" }}
-          h={{ base: "40px", lg: "60px" }}
+          h={{ base: "40px", lg: "50px" }}
         />
       </Box>
       <Menu />
