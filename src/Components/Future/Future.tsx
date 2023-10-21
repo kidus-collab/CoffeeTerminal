@@ -13,7 +13,14 @@ import Future6 from "../../utils/images/Future/Future6.jpg";
 
 const Future = () => {
   return (
-    <div id="Future">
+    <div
+      id="Future"
+      style={{
+        transitionProperty: "ease-in-out",
+        transitionDuration: "300ms",
+        transitionDelay: "300ms",
+      }}
+    >
       <Box mt={2} mb={5}>
         <Text
           fontSize={{ base: "26px", md: "40px" }}
