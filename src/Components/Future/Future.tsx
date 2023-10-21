@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Box, Text, Flex } from "@chakra-ui/react";
+import { Box, Text, Grid } from "@chakra-ui/react";
 import { Font } from "../../utils/constants";
 import FutureImg from "./FutureImg";
 // images
@@ -16,7 +16,7 @@ const Future = () => {
     <div id="Future">
       <Box mt={2} mb={5}>
         <Text
-          fontSize={{ base: "32px", md: "40px" }}
+          fontSize={{ base: "26px", md: "40px" }}
           fontWeight="black"
           fontFamily={Font.heading}
           textAlign="center"
@@ -33,18 +33,18 @@ const Future = () => {
         >
           We hope to expand our coffee shop with different designs
         </Text>
-        <Box display={{ base: "flex", lg: "block" }}>
-          <Flex gap={3} flexDirection={{ base: "column", lg: "row" }}>
-            <FutureImg img={Future1} />
-            <FutureImg img={Future2} />
-            <FutureImg img={Future3} />
-          </Flex>
-          <Flex gap={3} flexDirection={{ base: "column", lg: "row" }}>
-            <FutureImg img={Future4} />
-            <FutureImg img={Future5} />
-            <FutureImg img={Future6} />
-          </Flex>
-        </Box>
+        <Grid
+          gap={4}
+          templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(3, 1fr)" }}
+        >
+          <FutureImg img={Future1} />
+          <FutureImg img={Future2} />
+          <FutureImg img={Future3} />
+
+          <FutureImg img={Future4} />
+          <FutureImg img={Future5} />
+          <FutureImg img={Future6} />
+        </Grid>
       </Box>
     </div>
   );
