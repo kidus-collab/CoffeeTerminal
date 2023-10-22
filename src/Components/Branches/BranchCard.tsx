@@ -74,7 +74,7 @@ const BranchCard: FC<BranchCardProps> = ({ img, branch, gate, location }) => {
         <Box
           alignItems="left"
           justifyContent="left"
-          ml={3}
+          w="100%"
           my={{ base: 5, md: 3 }}
         >
           <Text
@@ -82,7 +82,7 @@ const BranchCard: FC<BranchCardProps> = ({ img, branch, gate, location }) => {
             fontWeight="black"
             fontFamily={Font.heading}
             textAlign="left"
-            ml={3}
+            ml={6}
           >
             {branch}
           </Text>
@@ -93,7 +93,7 @@ const BranchCard: FC<BranchCardProps> = ({ img, branch, gate, location }) => {
             fontWeight="bold"
             fontFamily={Font.heading}
             textAlign="left"
-            ml={3}
+            ml={6}
           >
             {gate}
           </Text>
@@ -103,7 +103,7 @@ const BranchCard: FC<BranchCardProps> = ({ img, branch, gate, location }) => {
               fontWeight="light"
               fontFamily={Font.paragraph}
               textAlign="left"
-              ml={3}
+              ml={6}
             >
               {location}
             </Text>
@@ -115,7 +115,7 @@ const BranchCard: FC<BranchCardProps> = ({ img, branch, gate, location }) => {
               px={{ base: 5, lg: 6 }}
               py={{ base: 3, lg: 6 }}
               bgColor={colors[1]}
-              alignSelf={{ base: "start", md: "end" }}
+              alignSelf="left"
             >
               <Icon color="white" as={FaMapMarked} />
               <Text
