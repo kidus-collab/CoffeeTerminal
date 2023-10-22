@@ -80,10 +80,10 @@ const About = () => {
         </Box>
         <Box py={{ base: 0, md: 3 }} w={{ base: "100%", md: "50%" }}>
           <video
+            autoPlay
             loop
             muted
-            w="100%"
-            h="88%"
+            style={{ height: "88%", width: "100%" }}
             src="/src/images/About/bgvid.mp4"
           />
         </Box>
