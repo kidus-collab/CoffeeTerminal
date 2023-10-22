@@ -15,6 +15,6 @@ interface Fonttype {
 export const laftoMap = "https://maps.app.goo.gl/va1uaqfy3WeDuwJ99";
 
 export const Font: Fonttype = {
-  heading: "montserrat , san-serif",
-  paragraph: "montserrat , san-serif",
+  heading: "'Montserrat', sans-serif",
+  paragraph: "'Montserrat', sans-serif",
 };
