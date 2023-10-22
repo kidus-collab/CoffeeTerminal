@@ -33,29 +33,59 @@ const Menu = () => {
           </Button>
           <Box ml={12} my={24}>
             <Box my={8}>
-              <Text fontFamily={Font.heading} fontWeight="bold" fontSize="16px">
-                Home
-              </Text>
+              <a href="#Landing">
+                <Text
+                  fontFamily={Font.heading}
+                  fontWeight="bold"
+                  fontSize="16px"
+                >
+                  Home
+                </Text>
+              </a>
+            </Box>
+            <a href="#About">
+              <Box my={8}>
+                <Text
+                  fontFamily={Font.heading}
+                  fontWeight="bold"
+                  fontSize="16px"
+                >
+                  About
+                </Text>
+              </Box>
+            </a>
+            <Box my={8}>
+              <a href="#Branches">
+                <Text
+                  fontFamily={Font.heading}
+                  fontWeight="bold"
+                  fontSize="16px"
+                >
+                  Branches
+                </Text>
+              </a>
             </Box>
             <Box my={8}>
-              <Text fontFamily={Font.heading} fontWeight="bold" fontSize="16px">
-                About
-              </Text>
+              <a href="#Mission">
+                <Text
+                  fontFamily={Font.heading}
+                  fontWeight="bold"
+                  fontSize="16px"
+                >
+                  Mission
+                </Text>
+              </a>
             </Box>
             <Box my={8}>
-              <Text fontFamily={Font.heading} fontWeight="bold" fontSize="16px">
-                Branches
-              </Text>
-            </Box>
-            <Box my={8}>
-              <Text fontFamily={Font.heading} fontWeight="bold" fontSize="16px">
-                Mission
-              </Text>
-            </Box>
-            <Box my={8}>
-              <Text fontFamily={Font.heading} fontWeight="bold" fontSize="16px">
-                Future
-              </Text>
+              <a href="#Future">
+                <Text
+                  fontFamily={Font.heading}
+                  fontWeight="bold"
+                  fontSize="16px"
+                >
+                  Future
+                </Text>
+              </a>
             </Box>
           </Box>
         </Box>
