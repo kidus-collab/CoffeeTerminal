@@ -79,13 +79,7 @@ const About = () => {
           </Flex>
         </Box>
         <Box py={{ base: 0, md: 3 }} w={{ base: "100%", md: "50%" }}>
-          <video
-            autoPlay
-            loop
-            muted
-            style={{ height: "88%", width: "100%" }}
-            src="/src/images/About/bgvid.mp4"
-          />
+          <Image sx={{ height: "88%", width: "100%" }} src={Shop} />
         </Box>
       </Box>
     </section>

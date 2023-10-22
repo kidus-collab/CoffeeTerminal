@@ -23,7 +23,7 @@ const Landing = () => {
           ml={{ base: 2, sm: 5, md: 8 }}
           mr={{ base: 0, lg: 8 }}
         >
-          <Box border="2px" borderColor="black" alignItems="left">
+          <Box alignItems="left">
             <Text
               fontWeight="bold"
               fontSize={{ base: "11px", md: "14px", lg: "20px" }}
@@ -73,8 +73,6 @@ const Landing = () => {
             alignItems="center"
             justifyContent="center"
             w={{ base: "40%", lg: "32%" }}
-            border="2px"
-            borderColor="black"
             overflowX="hidden"
           >
             <Image
