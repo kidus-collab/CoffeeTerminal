@@ -20,6 +20,7 @@ const Menu = () => {
           bottom={0}
           transitionDelay="3000ms"
           transitionProperty="ease-in-out"
+          boxShadow="lg"
         >
           <Button
             zIndex={10}

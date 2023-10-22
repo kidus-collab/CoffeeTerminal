@@ -79,7 +79,7 @@ const About = () => {
           </Flex>
         </Box>
         <Box py={{ base: 0, md: 3 }} w={{ base: "100%", md: "50%" }}>
-          <Image sx={{ height: "88%", width: "100%" }} src={Shop} />
+          <Image h="88%" w="100%" src={Shop} />
         </Box>
       </Box>
     </section>
