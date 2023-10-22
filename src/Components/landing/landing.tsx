@@ -6,7 +6,7 @@ import { BiSolidCoffeeBean, BiSolidCoffeeTogo } from "react-icons/bi";
 
 import { Font, colors } from "../../utils/constants";
 import packedCoffee from "../../utils/images/landing/coffeebag.png";
-import coffeeCup from "../../utils/images/landing/coffeecup 1.png";
+import coffeeCup from "../../utils/images/landing/coffeecup.png";
 //component
 import Nav from "./Nav";
 
@@ -23,7 +23,7 @@ const Landing = () => {
           ml={{ base: 2, sm: 5, md: 8 }}
           mr={{ base: 0, lg: 8 }}
         >
-          <Box alignItems="left">
+          <Box border="2px" borderColor="black" alignItems="left">
             <Text
               fontWeight="bold"
               fontSize={{ base: "11px", md: "14px", lg: "20px" }}
@@ -34,7 +34,7 @@ const Landing = () => {
             </Text>
             <Text
               fontWeight="black"
-              fontSize={{ base: "23px", sm: "32px", md: "43px", lg: "55px" }}
+              fontSize={{ base: "25px", sm: "32px", md: "43px", lg: "55px" }}
               fontFamily={Font.heading}
               sx={{ lineHeight: "1.1em" }}
               mb={{ base: 3, lg: 4 }}
@@ -70,16 +70,19 @@ const Landing = () => {
             </a>
           </Box>
           <Box
-            alignItems={{ base: "right", lg: "center" }}
-            justifyContent={{ base: "right", lg: "center" }}
-            w={{ base: "50%", lg: "32%" }}
+            alignItems="center"
+            justifyContent="center"
+            w={{ base: "40%", lg: "32%" }}
+            border="2px"
+            borderColor="black"
+            overflowX="hidden"
           >
             <Image
-              src={packedCoffee}
-              w={{ base: "330px", sm: "320px", md: "400px", lg: "490px" }}
-              h={{ base: "155px", sm: " 230px ", md: "300px", lg: "340px" }}
+              src={coffeeCup}
+              w={{ base: "330px", sm: "158px", md: "280px", lg: "340px" }}
+              h={{ base: "155px", sm: " 209px ", md: "350px", lg: "432px" }}
               alignSelf="self-end"
-              mr="-30px"
+              mx="auto"
             />
           </Box>
 
@@ -89,7 +92,7 @@ const Landing = () => {
             alignItems="center"
             justifyContent="center"
           >
-            <Image src={coffeeCup} />
+            <Image src={packedCoffee} />
             <Text fontFamily={Font.heading} fontWeight="bold" fontSize="20px">
               Ethiopian coffee shop with vision & mission
             </Text>
