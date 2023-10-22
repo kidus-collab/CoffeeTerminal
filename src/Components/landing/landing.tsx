@@ -78,7 +78,7 @@ const Landing = () => {
             <Image
               src={coffeeCup}
               w={{ base: "200px", sm: "158px", md: "280px", lg: "340px" }}
-              h={{ base: "185px", sm: " 209px ", md: "350px", lg: "432px" }}
+              h={{ base: "190px", sm: " 209px ", md: "350px", lg: "432px" }}
               alignSelf="self-end"
               mx="auto"
             />
