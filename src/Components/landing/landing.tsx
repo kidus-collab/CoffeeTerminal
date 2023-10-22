@@ -19,7 +19,7 @@ const Landing = () => {
           display="flex"
           w={{ base: "100%", lg: "none" }}
           justifyContent="space-between"
-          mt={{ base: 10, lg: 4 }}
+          mt={{ base: 6, lg: 4 }}
           ml={{ base: 2, sm: 5, md: 8 }}
           mr={{ base: 0, lg: 8 }}
         >
