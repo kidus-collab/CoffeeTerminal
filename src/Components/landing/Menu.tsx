@@ -11,7 +11,7 @@ const Menu = () => {
     if (toggle) {
       return (
         <Box
-          backdropBlur="lg"
+          zIndex={10}
           bgColor={colors[0]}
           pos="absolute"
           w="40%"
@@ -23,14 +23,14 @@ const Menu = () => {
           boxShadow="lg"
         >
           <Button
-            zIndex={10}
+            zIndex={20}
             pos="absolute"
             top={5}
             right={5}
             onClick={setToggle.toggle}
-            boxShadow="lg"
+            bgColor={colors[0]}
           >
-            <Icon as={FaAlignJustify} color="black" />
+            <Icon as={FaAlignJustify} color={colors[2]} />
           </Button>
           <Box ml={12} my={24}>
             <Box my={8}>
@@ -39,6 +39,7 @@ const Menu = () => {
                   fontFamily={Font.heading}
                   fontWeight="bold"
                   fontSize="16px"
+                  color={colors[2]}
                 >
                   Home
                 </Text>
@@ -50,6 +51,7 @@ const Menu = () => {
                   fontFamily={Font.heading}
                   fontWeight="bold"
                   fontSize="16px"
+                  color={colors[2]}
                 >
                   About
                 </Text>
@@ -61,6 +63,7 @@ const Menu = () => {
                   fontFamily={Font.heading}
                   fontWeight="bold"
                   fontSize="16px"
+                  color={colors[2]}
                 >
                   Branches
                 </Text>
@@ -72,6 +75,7 @@ const Menu = () => {
                   fontFamily={Font.heading}
                   fontWeight="bold"
                   fontSize="16px"
+                  color={colors[2]}
                 >
                   Mission
                 </Text>
@@ -83,6 +87,7 @@ const Menu = () => {
                   fontFamily={Font.heading}
                   fontWeight="bold"
                   fontSize="16px"
+                  color={colors[2]}
                 >
                   Future
                 </Text>
@@ -101,8 +106,9 @@ const Menu = () => {
         right={5}
         boxShadow="md"
         onClick={setToggle.toggle}
+        bgColor={colors[0]}
       >
-        <Icon as={FaAlignJustify} color="black" />
+        <Icon as={FaAlignJustify} color={colors[2]} />
       </Button>
       {hamMenu()}
     </Box>
