@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Box, HStack, Text } from "@chakra-ui/react";
+import { Box, Grid, Text } from "@chakra-ui/react";
 import MenuCard from "./MenuCard";
 //images
 import Bgimg from "../../utils/images/Menu/logobgpic.jpg";
@@ -78,12 +78,17 @@ const Services = () => {
           >
             Roasted & grounded coffee from all around ethiopia
           </Text>
-          <HStack
+          <Grid
             w="100%"
             display="flex"
+            flexDirection={{ base: "column", md: "row" }}
+            gridTemplateColumns={{
+              base: "repeat(1 , 1fr)",
+              md: "repeat(3 , 1fr)",
+            }}
             gap={{ base: 5, md: 20 }}
             mx="auto"
-            justifyContent={{ base: "space-evenly", lg: "center" }}
+            justifyContent="center"
             alignItems="Center"
             mb={4}
           >
@@ -93,7 +98,7 @@ const Services = () => {
               hone={catering.h1}
               htwo={catering.h2}
             />
-          </HStack>
+          </Grid>
           <Text
             fontSize={{ base: "35px", sm: "40px", md: "50px" }}
             fontWeight="black"
@@ -111,9 +116,10 @@ const Services = () => {
           >
             Few of our finest beverages
           </Text>
-          <HStack
+          <Box
             w="100%"
             display="flex"
+            flexDirection={{ base: "column", md: "row" }}
             gap={{ base: 5, lg: 8 }}
             overflowX="auto"
             alignItems="Center"
@@ -132,7 +138,7 @@ const Services = () => {
               hone={machiato.h1}
               htwo={machiato.h2}
             />
-          </HStack>
+          </Box>
         </Box>
       </div>
     </Box>
