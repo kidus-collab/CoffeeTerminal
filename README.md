@@ -1,5 +1,6 @@
-// write description
-// seo
-// hamburger menu nav link
-// service bg change
-// fix bg gap
+Coffee terminal
+
+- Coffee shop in ethiopia
+  Made by React & chakra ui
+
+yarn start after clone
