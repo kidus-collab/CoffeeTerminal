@@ -1,8 +1,10 @@
 export const colors: string[] = [
   // landing page bg
-  "rgba(243, 241, 241, 1)",
+  "rgba(60, 15, 15, 1)",
   // button black
   "rgba(23, 23, 23, 1)",
+  // text yellow
+  "rgba(227, 237, 107, 1)",
   //navbar selected
   "rgba(24, 21, 21, 1)",
 ];
