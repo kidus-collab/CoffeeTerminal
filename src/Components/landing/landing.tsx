@@ -19,7 +19,7 @@ const Landing = () => {
           display="flex"
           w={{ base: "100%", lg: "none" }}
           justifyContent="space-between"
-          mt={{ base: 10, lg: 4 }}
+          mt={{ base: 6, lg: 4 }}
           ml={{ base: 2, sm: 5, md: 8 }}
           mr={{ base: 0, lg: 8 }}
         >
@@ -29,10 +29,12 @@ const Landing = () => {
               fontSize={{ base: "11px", md: "14px", lg: "20px" }}
               fontFamily={Font.paragraph}
               mt="-20px"
+              color={colors[2]}
             >
               take a break its coffee time
             </Text>
             <Text
+              color={colors[2]}
               fontWeight="black"
               fontSize={{ base: "25px", sm: "32px", md: "43px", lg: "55px" }}
               fontFamily={Font.heading}
@@ -51,9 +53,9 @@ const Landing = () => {
                 py={{ base: 3, lg: 6 }}
                 bgColor={colors[1]}
               >
-                <Icon color="white" as={BiSolidCoffeeTogo} />
+                <Icon color={colors[2]} as={BiSolidCoffeeTogo} />
                 <Text
-                  color="white"
+                  color={colors[2]}
                   fontFamily={Font.heading}
                   fontSize={{
                     base: "10px",
@@ -91,7 +93,12 @@ const Landing = () => {
             justifyContent="center"
           >
             <Image src={packedCoffee} />
-            <Text fontFamily={Font.heading} fontWeight="bold" fontSize="20px">
+            <Text
+              fontFamily={Font.heading}
+              fontWeight="bold"
+              color={colors[2]}
+              fontSize="20px"
+            >
               Ethiopian coffee shop with vision & mission
             </Text>
             <Box mx="10px">
@@ -101,11 +108,13 @@ const Landing = () => {
                   mr={3}
                   fontSize="11px"
                   fontWeight="bold"
+                  color={colors[2]}
                 />
                 <Text
                   fontFamily={Font.paragraph}
                   fontWeight="regular"
                   fontSize="11px"
+                  color={colors[2]}
                 >
                   {" "}
                   coffee is more than just a beverage
@@ -120,11 +129,13 @@ const Landing = () => {
                   mt={1}
                   fontSize="11px"
                   fontWeight="bold"
+                  color={colors[2]}
                 />
                 <Text
                   fontFamily={Font.paragraph}
                   fontWeight="regular"
                   fontSize="11px"
+                  color={colors[2]}
                 >
                   {" "}
                   premier gateway for the finest
