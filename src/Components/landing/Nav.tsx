@@ -16,7 +16,13 @@ const Nav = () => {
   const [Red, setRed] = useState<useStateType>({ isactive: false, name: "" });
 
   return (
-    <Box display="flex" mb={5} justifyContent="space-between">
+    <Box
+      bg={colors[0]}
+      display="flex"
+      pb={3}
+      mb={5}
+      justifyContent="space-between"
+    >
       <Box ml={{ base: 2, md: 8 }} mt="5px">
         <Image
           src={logo}
@@ -47,6 +53,7 @@ const Nav = () => {
               fontFamily={Font.heading}
               fontWeight="bold"
               fontSize="16px"
+              color={colors[2]}
               onClick={() => setRed({ isactive: true, name: "Home" })}
             >
               Home
@@ -54,6 +61,7 @@ const Nav = () => {
           </a>
         </Box>
         <Box
+          color={colors[2]}
           borderBottom={Red.isactive && Red.name === "Home" ? "3px" : "none"}
           borderColor={
             Red.isactive && Red.name === "Home" ? colors[2] : "transparent"
@@ -72,6 +80,7 @@ const Nav = () => {
           </a>
         </Box>
         <Box
+          color={colors[2]}
           borderBottom={Red.isactive && Red.name === "Home" ? "3px" : "none"}
           borderColor={
             Red.isactive && Red.name === "Home" ? colors[2] : "transparent"
@@ -98,6 +107,7 @@ const Nav = () => {
         >
           <a href="#Mission">
             <Text
+              color={colors[2]}
               fontFamily={Font.heading}
               fontWeight="bold"
               fontSize="16px"
@@ -115,6 +125,7 @@ const Nav = () => {
         >
           <a href="#Future">
             <Text
+              color={colors[2]}
               fontFamily={Font.heading}
               fontWeight="bold"
               fontSize="16px"
