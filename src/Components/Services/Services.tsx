@@ -33,7 +33,7 @@ const catering: Packed = {
 // coffee + water card data
 const coffeewater: Packed = {
   Img: CoffeeWater,
-  h1: "Coffee catering",
+  h1: "Coffee With water",
   h2: "We  offer a 200ml bottle of water for free to customers who purchase a coffee drink. Coffee Terminal cares about the health and comfort of our customers",
 };
 // mohito card  data
