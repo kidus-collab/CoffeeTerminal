@@ -3,10 +3,10 @@ import { Box, Flex, Text } from "@chakra-ui/react";
 
 import MissionCard from "./MissionCard";
 //images
-import Missionimg from "../../utils/images/Mission_/mission.jpg";
-import Vision from "../../utils/images/Mission_/vision.jpg";
-import Goal from "../../utils/images/Mission_/goal.jpg";
-import Objective from "../../utils/images/Mission_/objective.jpg";
+import Missionimg from "../../utils/images/Mission/mission.jpg";
+import Vision from "../../utils/images/Mission/vision.jpg";
+import Goal from "../../utils/images/Mission/goal.jpg";
+import Objective from "../../utils/images/Mission/objective.jpg";
 
 import { Font } from "../../utils/constants";
 interface Type {
