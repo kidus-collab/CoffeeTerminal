@@ -6,8 +6,8 @@ import Header from './components/Header';
 import MenuList from './components/MenuList';
 
 export default function Menu() {
-  const [catagory, setCatagory] = useState([]);
-  const [menu, setMenu] = useState([]);
+  // const [catagory, setCatagory] = useState([]);
+  // const [menu, setMenu] = useState([]);
 
   useEffect(() => {
     fetchCatagory();

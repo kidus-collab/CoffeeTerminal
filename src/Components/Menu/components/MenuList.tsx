@@ -6,7 +6,7 @@ import logo from '../../../utils/images/Nav/logo.png';
 
 export default function MenuList() {
   const [data, setData] = useState([]);
-  const env = "http://localhost:4500";
+  const env = "https://coffee-terminal-api.alamondai.com";
 
   useEffect(() => {
     fetchItems();
