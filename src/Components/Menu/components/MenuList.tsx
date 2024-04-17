@@ -1,11 +1,14 @@
 import { useState, useEffect } from 'react';
 import axios from './axios';
+import ReactLoading from 'react-loading'
 
 // Images 
 import logo from '../../../utils/images/Nav/logo.png';
 
 export default function MenuList() {
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   const env = "https://coffee-terminal-api.alamondai.com";
 
   useEffect(() => {
@@ -13,17 +16,29 @@ export default function MenuList() {
   }, []);
 
   const fetchItems = async () => {
+    setLoading(true)
     await axios.get('/food/getAll')
       .then((response) => {
+        setLoading(false);
         setData(response.data);
       })
       .catch((error) => {
+        setLoading(false);
         console.error(error);
       })
   }
 
   return (
     <div className='w- mx-auto container h-full flex flex-col gap-5 md:px-3 py-5 px-5'>
+      {loading == true &&
+        <div className='w-full h-full flex items-center justify-center'>
+          <ReactLoading
+            type='spinningBubbles'
+            color='#000'
+            height={100}
+            width={100} />
+        </div>
+      }
       {
         data && data.map((items: any) => (
           <div
@@ -65,7 +80,7 @@ export default function MenuList() {
       }
 
       {
-        data && data.length === 0 && (
+        loading == false && data && data.length === 0 && (
           <div className='w-full h-full flex flex-col items-start justify-start py-20'>
             <div className='w-full h-full flex flex-col gap-10 items-center'>
               <img

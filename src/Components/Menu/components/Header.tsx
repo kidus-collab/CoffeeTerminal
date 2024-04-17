@@ -12,8 +12,15 @@ import logo from '../../../utils/images/Nav/logo.png';
 export default function Header() {
   return (
     <header className='w-full mx-auto h-auto md:h-20 flex md:flex-row flex-col gap-2 items-center justify-between px-5 md:px-20 border border-gray-200'>
-      <div className=' p-2'>
-        <img src={logo} alt='logo' className='w-16 h-auto' />
+      <div
+        onClick={() => {
+          window.location.href = "/"
+        }}
+        className='p-2 cursor-pointer'>
+        <img
+          src={logo}
+          alt='logo'
+          className='w-16 h-auto' />
       </div>
       <div className='w-full hidden  md:w-auto  flex-col md:flex-row gap-3 md:gap-10 items-center py-2'>
         <div className='w-full'>
