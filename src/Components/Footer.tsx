@@ -166,7 +166,7 @@ const Footer = () => {
                 _hover={{ color: "green" }}
               />
             </a>
-            <a href="">
+            <a href="https://www.youtube.com/">
               <Icon
                 as={FaYoutube}
                 color="white"
