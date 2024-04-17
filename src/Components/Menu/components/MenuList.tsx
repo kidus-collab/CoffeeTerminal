@@ -17,6 +17,9 @@ export default function MenuList() {
       .then((response) => {
         setData(response.data);
       })
+      .catch((error) => {
+        console.error(error);
+      })
   }
 
   return (
@@ -46,7 +49,7 @@ export default function MenuList() {
                       <img
                         className="w-24 h-full object-cover rounded border border-gray-200"
                         src={`${env}/food//getImage/${food[0].image}`}
-                        alt={`${food[0].name} Image`}
+                        alt={`${food[0].name}`}
                         onError={(e: any) => {
                           e.target.onerror = null;
                           e.target.src = "https://i.ibb.co/grVfW88/logo.png"
@@ -62,15 +65,15 @@ export default function MenuList() {
       }
 
       {
-        data && data.length == 0 && (
+        data && data.length === 0 && (
           <div className='w-full h-full flex flex-col items-start justify-start py-20'>
             <div className='w-full h-full flex flex-col gap-10 items-center'>
               <img
                 className='w-28 md:w-40 h-auto '
                 src={logo}
-                alt="Coffee Terminal Image" />
+                alt="Coffee Terminal" />
               <div>
-                <h1 className='text-lg md:text-3xl font-bold'>We God No Items for the Moment</h1>
+                <h1 className='text-lg md:text-3xl font-bold'>We Got No Items for the Moment</h1>
               </div>
             </div>
           </div>
